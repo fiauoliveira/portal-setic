@@ -16,6 +16,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+    const telefone = document.getElementById('telefone').value.trim();
+    const termos = document.getElementById('termos').checked;
+
+    if (telefone && !/^\+?\d{9,15}$/.test(telefone)) {
+        alert('Número de telefone inválido.');
+        return;
+    }
+
+    if (!termos) {
+        alert('É necessário aceitar os termos.');
+        return;
+    }
+
+
+    const btn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+        btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+
     // ========================================
     // Validação do Formulário de Contacto
     // ========================================
@@ -79,12 +106,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     const header = document.querySelector('.header');
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = '#122744';
-        } else {
-            header.style.backgroundColor = '#1a365d';
+ const sections = document.querySelectorAll("section");
+const navLinksAll = document.querySelectorAll(".nav-list a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
         }
     });
+
+    navLinksAll.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+
 
 });

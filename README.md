@@ -2,28 +2,29 @@
 
 Portal web do Serviço de Tecnologias de Informação e Comunicação das Finanças Públicas.
 
-## Estrutura do Projecto
+---
 
-```
-portal-setic/
-├── index.html        # Página principal
-├── css/
-│   └── styles.css    # Estilos do site
-├── js/
-│   └── main.js       # Funcionalidades JavaScript
-└── README.md         # Este ficheiro
-```
+## 📦 Versão
 
-## Tecnologias Utilizadas
+**v2.0**  
+Data de lançamento: 2026-01-22
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+---
 
-## Como Executar
+## 📝 Changelog
 
-Basta abrir o ficheiro `index.html` num navegador web.
+### v2.0
+- Melhoria da estrutura do projeto
+- Organização dos ficheiros CSS e JavaScript
+- Ajustes visuais e pequenos refinamentos no site
+- Correções gerais identificadas durante testes
 
-## Equipa de Desenvolvimento
+### v1.0
+- Estrutura inicial do portal
+- Página principal com HTML básico
+- Configuração inicial do projeto
 
-- SETIC - Curso Git Hands-On
+---
+
+## 📁 Estrutura do Projecto
+

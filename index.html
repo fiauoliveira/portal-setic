@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal SETIC - Serviços de Tecnologia</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -20,6 +23,8 @@
                         <li><a href="#servicos">Serviços</a></li>
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#noticias">Notícias</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </nav>
                 <button class="menu-toggle" aria-label="Abrir menu">
@@ -30,13 +35,20 @@
             </div>
         </div>
     </header>
-
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="container">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Transformação Digital</span>
             <h2>Serviços de Tecnologias de Informação</h2>
-            <p>Soluções tecnológicas para a modernização das Finanças Públicas</p>
-            <a href="#servicos" class="btn">Conhecer Serviços</a>
+            <p>
+                Soluções tecnológicas modernas para a inovação, eficiência e
+                modernização das Finanças Públicas
+            </p>
+            <div class="hero-actions">
+                <a href="#servicos" class="btn btn-primary">Conhecer Serviços</a>
+                <a href="#contacto" class="btn btn-outline">Fale Connosco</a>
+            </div>
         </div>
     </section>
 
@@ -48,12 +60,14 @@
                 <div class="servico-card">
                     <div class="servico-icon">💻</div>
                     <h3>Desenvolvimento de Software</h3>
-                    <p>Criação de sistemas personalizados para atender às necessidades específicas da administração pública.</p>
+                    <p>Criação de sistemas personalizados para atender às necessidades específicas da administração
+                        pública.</p>
                 </div>
                 <div class="servico-card">
                     <div class="servico-icon">🔒</div>
                     <h3>Segurança da Informação</h3>
-                    <p>Protecção de dados e sistemas contra ameaças cibernéticas com as melhores práticas do mercado.</p>
+                    <p>Protecção de dados e sistemas contra ameaças cibernéticas com as melhores práticas do mercado.
+                    </p>
                 </div>
                 <div class="servico-card">
                     <div class="servico-icon">☁️</div>
@@ -75,8 +89,10 @@
             <h2 class="section-title">Sobre o SETIC</h2>
             <div class="sobre-content">
                 <div class="sobre-text">
-                    <p>O Serviço de Tecnologias de Informação e Comunicação das Finanças Públicas (SETIC) é o órgão responsável pela gestão e modernização tecnológica do Ministério das Finanças.</p>
-                    <p>A nossa missão é garantir a excelência nos serviços de TI, promovendo a transformação digital e a eficiência operacional em toda a administração financeira do Estado.</p>
+                    <p>O Serviço de Tecnologias de Informação e Comunicação das Finanças Públicas (SETIC) é o órgão
+                        responsável pela gestão e modernização tecnológica do Ministério das Finanças.</p>
+                    <p>A nossa missão é garantir a excelência nos serviços de TI, promovendo a transformação digital e a
+                        eficiência operacional em toda a administração financeira do Estado.</p>
                     <ul class="sobre-lista">
                         <li>Mais de 50 sistemas em produção</li>
                         <li>Equipa técnica especializada</li>
@@ -124,6 +140,10 @@
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+                    <div class="form-group">
                         <label for="assunto">Assunto</label>
                         <select id="assunto" name="assunto" required>
                             <option value="">Selecione um assunto</option>
@@ -137,6 +157,12 @@
                         <label for="mensagem">Mensagem</label>
                         <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
                     </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="termos">
+                            Concordo com o tratamento dos dados
+                        </label>
+                    </div>
                     <button type="submit" class="btn">Enviar Mensagem</button>
                 </form>
             </div>
@@ -145,28 +171,49 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>SETIC</h3>
-                    <p>Serviço de Tecnologias de Informação e Comunicação</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
+        <div class="container footer-grid">
+            
+            <div>
+                <h3>SETIC</h3>
+                <p>Modernização tecnológica das Finanças Públicas</p>
+            </div>
+
+            <div class="footer-sitemap">
+                <h4>Mapa do Site</h4>
+                <ul class="sitemap-list">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre o SETIC</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+
+            <div>
+                <h4>Contactos</h4>
+                <p>📍 Luanda, Angola</p>
+                <p>📞 +244 222 000 000</p>
+                <p>✉ contacto@setic.gov.ao</p>
+            </div>
+
+            <div>
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 SETIC - Todos os direitos reservados</p>
-            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 SETIC — Todos os direitos reservados</p>
         </div>
     </footer>
 
+    <button id="scrollTopBtn">↑</button>
     <script src="js/main.js"></script>
 </body>
+
 </html>
