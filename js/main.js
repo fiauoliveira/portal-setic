@@ -16,6 +16,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
+    const telefone = document.getElementById('telefone').value.trim();
+    const termos = document.getElementById('termos').checked;
+
+    if (telefone && !/^\+?\d{9,15}$/.test(telefone)) {
+        alert('Número de telefone inválido.');
+        return;
+    }
+
+    if (!termos) {
+        alert('É necessário aceitar os termos.');
+        return;
+    }
+
+
+    const btn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+        btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+
     // ========================================
     // Validação do Formulário de Contacto
     // ========================================
