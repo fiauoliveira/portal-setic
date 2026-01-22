@@ -79,12 +79,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     const header = document.querySelector('.header');
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = '#122744';
-        } else {
-            header.style.backgroundColor = '#1a365d';
+ const sections = document.querySelectorAll("section");
+const navLinksAll = document.querySelectorAll(".nav-list a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
         }
     });
+
+    navLinksAll.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+
 
 });
