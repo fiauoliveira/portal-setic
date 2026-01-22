@@ -26,5 +26,9 @@ Data de lançamento: 2026-01-22
 
 ---
 
+<p align="center">
+  <img src="images/logo.png" width="200" height="200" alt="Portal SETIC"/>
+</p>
+
 ## 📁 Estrutura do Projecto
 
